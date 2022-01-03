@@ -17,7 +17,14 @@
 		#define CLEAR system("clear");
 #else
 		#define CLEAR
-		std::cout<<"Can't clear, but ima just test system(\"clear\")"<<std::endl;
+        static bool tested = false;
+        if (tested == false)
+        {
+            std::cout<<"Can't clear, but ima just test system(\"clear\")"<<std::endl;
+            std::cout<<"if an error occours change the code under here to work with your OS"<<std::endl;
+            std::cin.get();
+        }
+        tested = true;
 		system("clear");
 #endif
 
